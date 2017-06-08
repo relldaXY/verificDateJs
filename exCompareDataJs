@@ -1,0 +1,33 @@
+var dataAtual = new Date();
+dataAtual.setHours(dataAtual.getHours() - 3);
+var vencimento = new Date("2017-06-10");
+vencimento.setHours(dataAtual.getHours());
+vencimento.setMinutes(dataAtual.getMinutes());
+vencimento.setSeconds(dataAtual.getSeconds());
+			
+var teste = false;
+
+if (dataAtual <= vencimento) {
+	teste = true;
+} else {
+	teste = false;
+}
+
+$scope.teste = teste;
+$scope.vencimento = vencimento;
+$scope.dataAtual = dataAtual;
+
+});
+
+</script>
+</head>
+<body ng-controller="listaTelefonicaCtrl">
+	<div class="jumbotron">
+		{{dataAtual}}
+		{{vencimento}}
+		{{teste}}
+.
+.
+.
+.
+.
